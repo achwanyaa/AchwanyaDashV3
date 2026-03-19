@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+:root {
+  --gold: #D97706;
+  --gold-hover: #B45309;
+  --green: #10B981;
+  --sidebar: #111111;
+  --bg: #F8F7F5;
+  --surface: #FFFFFF;
+  --border: #E5E3DF;
+  --text: #1A1A1A;
+  --muted: #6B7280;
+  --danger: #EF4444;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: 'DM Sans', ui-sans-serif, system-ui, sans-serif;
+}
+
+.input {
+  width: 100%;
+  border-radius: 0.5rem;
+  border: 1px solid var(--border);
+  background: white;
+  padding: 0.625rem 0.75rem;
+  font-size: 0.875rem;
+  color: var(--text);
+  outline: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.input:focus {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(217, 119, 6, 0.1);
+}
+
+.input::placeholder {
+  color: #9CA3AF;
+}
+
+.btn-primary {
+  background: var(--gold);
+  color: white;
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 0.625rem 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  transition: background 0.15s;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn-primary:hover { background: var(--gold-hover); }
+.btn-primary:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.btn-ghost {
+  background: white;
+  color: var(--text);
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 0.625rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--border);
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.btn-ghost:hover { background: var(--bg); border-color: #D4D2CE; }
+
+.card {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+}
